@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vidazoo</title>
+  <script>
+    function waitForPlayer() {
+      setTimeout(function() {
+        var vpt = new VPT({
+          playerId: "5b228165ded76a0004ad5a55",
+          userId: "57b1cfb0f39a2d1100d8969c",
+          wait: 60,
+          onPause: function() {
+            console.log("Player Paused");
+          }
+        });
+      }, 60000);
+    }
+  </script>
+</head>
+<body onload="waitForPlayer()">
+ <div style="width:500px;height:500px">
+    <script src="https://static.vidazoo.com/basev/vpt.js"></script>
+  </div>
+</body>
+</html>
